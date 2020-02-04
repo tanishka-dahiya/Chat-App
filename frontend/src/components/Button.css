@@ -1,0 +1,24 @@
+.Registerbutton {
+  margin: 2em;
+  width: 5em;
+  height: 2em;
+
+  background-color: rgb(111, 114, 117);
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  outline: none;
+
+  border: 0;
+  color: white;
+
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 16px;
+}
+.Registerbutton:hover {
+  background-color: rgb(49, 50, 51);
+  box-shadow: 0 15px 16px 0 rgba(0, 0, 0, 0.24),
+    0 18px 55px 0 rgba(0, 0, 0, 0.19);
+}

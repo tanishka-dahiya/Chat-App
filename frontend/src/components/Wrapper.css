@@ -1,0 +1,21 @@
+.wraaper {
+  background: rgba(231, 226, 226, 0.281);
+  color: rgb(89, 125, 180);
+
+  width: 35.625rem;
+
+  height: 30rem;
+
+  -webkit-box-shadow: 0 0.0625rem 1.25rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.0625rem 1.25rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.125rem;
+
+  text-align: center;
+  margin: 50px auto;
+}
+.wraaper-Form {
+  padding: 3rem;
+}
+h1 {
+  color: rgba(82, 82, 87, 0.555);
+}
