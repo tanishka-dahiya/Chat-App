@@ -42,11 +42,17 @@ class Chat extends Component {
   }
 
   addMessage = message =>
-    this.setState(state => ({ messages: [message, ...state.messages] }));
+    this.setState(state => ({ messages: [...state.messages, message] }));
 
   submitMessage = messageString => {
     // on submitting the ChatInput form, send the message, add it to the list and reset the input
-    const message = { name: this.state.name, message: messageString };
+    let today = new Date();
+    let DtaeEXact = today.getHours() + ":" + today.getMinutes();
+    const message = {
+      name: this.state.name,
+      message: messageString,
+      time: DtaeEXact
+    };
     this.ws.send(JSON.stringify(message));
     this.addMessage(message);
   };
@@ -61,11 +67,13 @@ class Chat extends Component {
             message={message.message}
             name={message.name}
             yourName={this.state.name}
+            time={message.time}
           />
         ))}
         <ChatInput
           ws={this.ws}
           onSubmitMessage={messageString => this.submitMessage(messageString)}
+          length={this.state.messages.length}
         />
       </div>
     ) : (
