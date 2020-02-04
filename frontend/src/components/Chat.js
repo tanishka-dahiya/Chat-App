@@ -55,10 +55,6 @@ class Chat extends Component {
     return this.state.isjoined == true ? (
       <div>
         {" "}
-        <ChatInput
-          ws={this.ws}
-          onSubmitMessage={messageString => this.submitMessage(messageString)}
-        />
         {this.state.messages.map((message, index) => (
           <ChatMessage
             key={index}
@@ -67,6 +63,10 @@ class Chat extends Component {
             yourName={this.state.name}
           />
         ))}
+        <ChatInput
+          ws={this.ws}
+          onSubmitMessage={messageString => this.submitMessage(messageString)}
+        />
       </div>
     ) : (
       <Header
