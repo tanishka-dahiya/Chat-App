@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../css/landingPage.css";
 import IconButton from "./Button";
 
-const Appp = () => {
+const Appp = props => {
   const [classNameForAnimation, setClass] = useState("");
   const handleFocus = () => {
     setClass("password");
@@ -33,10 +33,11 @@ const Appp = () => {
             type="email password"
             onFocus={handleFocus}
             onBlur={handleBlur}
+            onChange={props.onChange}
           ></input>
         </div>
       </div>
-      <IconButton />
+      <IconButton onClick={props.onSubmit} />
     </React.Fragment>
   );
 };

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./ChatInput.css";
 
 class ChatInput extends Component {
   static propTypes = {
@@ -12,6 +13,7 @@ class ChatInput extends Component {
   render() {
     return (
       <form
+        class="msger-inputarea"
         action="."
         onSubmit={e => {
           e.preventDefault();
@@ -22,10 +24,11 @@ class ChatInput extends Component {
         <input
           type="text"
           placeholder={"Enter message..."}
+          className="msger-input"
           value={this.state.message}
           onChange={e => this.setState({ message: e.target.value })}
         />
-        <input type="submit" value={"Send"} />
+        <input type="submit" value={"Send"} className="msger-send-btn" />
       </form>
     );
   }
