@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ChatInput from "./ChatInput";
 import ChatMessage from "./ChatMessage";
 import Header from "./Header";
-const URL = "ws://localhost:3030";
+const URL = "wss://chat-app-1997.herokuapp.com/";
 
 class Chat extends Component {
   state = {

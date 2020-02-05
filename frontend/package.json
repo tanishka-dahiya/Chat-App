@@ -16,10 +16,10 @@
     "stylus": "^0.54.7"
   },
   "scripts": {
-    "start-js": "react-scripts start",
-    "start": "react-scripts start",
-    "build-js": "react-scripts build",
-    "build": "npm-run-all build-css build-js"
+    "start": "react-scripts start"
+  },
+  "engines": {
+    "node": "10.15.3"
   },
   "eslintConfig": {
     "extends": "react-app"
