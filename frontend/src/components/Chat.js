@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ChatInput from "./ChatInput";
 import ChatMessage from "./ChatMessage";
 import Header from "./Header";
-const URL = "wss://chat-app-1997.herokuapp.com/";
+const URL = "ws://localhost:3030";
 
 class Chat extends Component {
   state = {
@@ -77,11 +77,11 @@ class Chat extends Component {
         />
       </div>
     ) : (
-      <Header
-        handleNameChange={this.handleNameChange}
-        handleNameSubmit={this.handleNameSubmit}
-      />
-    );
+        <Header
+          handleNameChange={this.handleNameChange}
+          handleNameSubmit={this.handleNameSubmit}
+        />
+      );
   }
 }
 
